@@ -1,0 +1,205 @@
+#bg {
+    position: fixed;
+    z-index: 1;
+    width: 300px;
+    height: 250px;
+    top: 25%;
+    left: 25%;
+    overflow: hidden;
+    background-position: center;
+    background-image: url('images/blackFade.png');
+}
+
+#intro-bg,
+.intro-text,
+#earth,
+#spaceship,
+#title,
+#date,
+#now,
+.trailer-link {
+    display: none;
+}
+
+.intro-text {
+    position: absolute;
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    top: 30%;
+    z-index: 3;
+}
+
+#spaceship {
+    position: absolute;
+    z-index: 2;
+    transform-origin: bottom;
+}
+
+#earth {
+    position: absolute;
+    z-index: 2;
+    transform-origin: top;
+}
+
+#title {
+    position: absolute;
+    z-index: 3;
+    top: 28%;
+    left: 4%;
+}
+
+#date, #now {
+    position: absolute;
+    z-index: 4;
+    width: 90%;
+    top: 63%;
+    left: 6%;
+}
+
+.trailer-link {
+    position: absolute;
+    z-index: 4;
+    width: 252px;
+    height: 29px;
+    overflow: hidden;
+    top: 75%;
+    left: 9%;
+}
+
+#cta {
+    position: absolute;
+    z-index: 5;
+}
+
+#lightwash {
+    position: absolute;
+    z-index: 6;
+    top: 8%;
+    left: -50%;
+    width: 50%;
+    transition: left .5s;
+}
+
+#beam-top {
+    position: absolute;
+    z-index: 6;
+    opacity: 0;
+    top: 0%;
+    transition: opacity 1s;
+}
+
+.trailer-link:hover > #lightwash {
+    left: 95%;
+}
+
+.bg-zoom-out {
+    animation: bg 4s;
+    animation-timing-function: cubic-bezier(1, .24, .17, .99);
+    animation-fill-mode: forwards;
+}
+
+.text-zoom-out {
+    animation: text 1s;
+    animation-timing-function: cubic-bezier(.16, .94, .31, .6);
+}
+
+.ship-zoom-out {
+    animation: ship 2s;
+    animation-timing-function: cubic-bezier(1, .24, .17, .99);
+    animation-fill-mode: forwards;
+}
+
+.earth-zoom-out {
+    animation: earth 2s;
+    animation-timing-function: cubic-bezier(1, .24, .17, .99);
+    animation-fill-mode: forwards;
+}
+
+.title-zoom-out {
+    animation: title 2s;
+    animation-timing-function: cubic-bezier(.16, .94, .31, .6);
+    animation-fill-mode: forwards;
+}
+
+.trailer-in {
+    animation: trailer 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text {
+    0% {
+        transform: scale(4);
+    }
+    100% {
+        transform: scale(0.2);
+    }
+}
+
+@keyframes bg {
+    0% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes earth {
+    0% {
+        transform: scale(2);
+        top: 80%;
+    }
+    100% {
+        transform: scale(1);
+        top: 40%;
+    }
+}
+
+@keyframes ship {
+    0% {
+        transform: scale(2);
+        top: -20%;
+    }
+    100% {
+        transform: scale(1);
+        top: 0%;
+    }
+}
+
+@keyframes title {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes beam {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes trailer {
+    0% {
+        top: 100%;
+        left: 9%;
+    }
+    100% {
+        top: 80%;
+        left: 9%;
+    }
+}
